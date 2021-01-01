@@ -33,14 +33,14 @@ async function readNote(notePath: string): Promise<Note> {
   
   const headingNode = await headingFinder.run(parseTree);
   // let title;
-    throw new Error(`${notePath} has no title`);	  // if (headingNode.type === "missingTitle") {
-  }	  const title = notePath
-  const title = remark()	    .split("/")
-    .stringify({	    .slice(-1)[0]
-      type: "root",	    .split(".")[0];
-      children: (headingNode as MDAST.Heading).children	  // } else {
-    })	  //   console.log(headingNode);
-    .trimEnd();	  //   title = remark()
+  // if (headingNode.type === "missingTitle") {
+  const title = notePath
+    .split("/")
+    .slice(-1)[0]
+    .split(".")[0];
+  // } else {
+  //   console.log(headingNode);
+  //   title = remark()
   //     .stringify({
   //       type: "root",
   //       children: (headingNode as MDAST.Heading).children
