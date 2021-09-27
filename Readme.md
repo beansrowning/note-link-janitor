@@ -1,3 +1,7 @@
+Updates in this fork:
+
+1. (01/01/2021) Taking houshuang's fixes from https://github.com/houshuang/note-link-janitor/commit/3d0876aaad3ed91784a23330992ccf3da4e6f7b0 into the latest version of note-link-junior as no title's from Obsidian is an issue
+
 # note-link-janitor
 
 This script reads in a folder of Markdown files, notes all the [[wiki-style links]] between them, then adds a special "backlinks" section which lists passages which reference a given file.
